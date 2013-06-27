@@ -1,0 +1,4 @@
+Express server listening on port \\.\pipe\08199a6b-e2d6-4c3b-811f-c7fae783cdf6
+[90mGET /crear [32m200 [90m321ms - 320b[0m
+[90mPOST /tareas [36m302 [90m15ms - 92b[0m
+[90mGET /tareas/crear.jade [33m404 [90m3ms[0m

@@ -1,0 +1,11 @@
+Express server listening on port \\.\pipe\c0909c06-2b9c-42dd-8636-7b5641faa3b5
+[90mGET /crear [32m200 [90m321ms - 320b[0m
+[90mGET /tareas [32m200 [90m193ms - 816b[0m
+[90mGET /tareas [32m200 [90m128ms - 816b[0m
+[90mGET / [32m200 [90m41ms - 243b[0m
+[90mGET /crear [32m200 [90m31ms - 320b[0m
+[90mGET /tareas [32m200 [90m100ms - 894b[0m
+[90mGET /tareas/51c60404b277c1cc07000001/editar [32m200 [90m30ms - 408b[0m
+[90mGET /tareas/51c60404b277c1cc07000001/editar [32m200 [90m32ms - 408b[0m
+[90mPUT /tareas/51c60404b277c1cc07000001 [36m302 [90m21ms - 70b[0m
+[90mGET /tareas [32m200 [90m93ms - 895b[0m

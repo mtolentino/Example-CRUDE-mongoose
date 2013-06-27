@@ -1,0 +1,32 @@
+Express server listening on port \\.\pipe\5238d8f4-ebfb-4ebd-9876-c2fcc57c5efa
+[90mGET / [32m200 [90m327ms - 243b[0m
+[90mGET /crear [32m200 [90m44ms - 320b[0m
+[90mPOST /tareas [36m302 [90m20ms - 82b[0m
+[90mGET /tareas/crear [33m404 [90m5ms[0m
+[90mGET /tareas/crear [33m404 [90m2ms[0m
+[90mGET /tareas/crear [33m404 [90m1ms[0m
+[90mGET /tareas/crear [33m404 [90m1ms[0m
+[90mGET /tareas/crear [33m404 [90m0ms[0m
+[90mGET /tareas/crear [33m404 [90m1ms[0m
+[90mGET /tareas/crear [33m404 [90m1ms[0m
+[90mGET /tareas/crear [33m404 [90m1ms[0m
+[90mGET /tareas/crear [33m404 [90m1ms[0m
+[90mGET /tareas/crear [33m404 [90m2ms[0m
+[90mGET /tareas/crear [33m404 [90m1ms[0m
+[90mGET /tareas/crear [33m404 [90m2ms[0m
+[90mGET /tareas/crear [33m404 [90m1ms[0m
+[90mGET /tareas/crear [33m404 [90m1ms[0m
+[90mGET /tareas/crear [33m404 [90m1ms[0m
+[90mGET /tareas/crear [33m404 [90m1ms[0m
+[90mGET /tareas/crear [33m404 [90m1ms[0m
+[90mGET /tareas/crear [33m404 [90m1ms[0m
+[90mGET /tareas/crear [33m404 [90m1ms[0m
+[90mGET /tareas/crear [33m404 [90m1ms[0m
+[90mGET /tareas/crear [33m404 [90m1ms[0m
+[90mGET /tareas/crear [33m404 [90m1ms[0m
+[90mGET /tareas/crear [33m404 [90m2ms[0m
+[90mGET /tareas/crear [33m404 [90m1ms[0m
+[90mGET /tareas/crear [33m404 [90m4ms[0m
+[90mGET /tareas/crear [33m404 [90m1ms[0m
+[90mGET /tareas/crear [33m404 [90m0ms[0m
+[90mGET /tareas/crear [33m404 [90m1ms[0m

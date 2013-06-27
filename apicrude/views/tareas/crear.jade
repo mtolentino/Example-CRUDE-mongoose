@@ -1,0 +1,11 @@
+
+extends ../layout
+
+block content
+  h1 Crear tareas
+  p Insert a Mongo DB
+
+  form(method='post', action='/tareas')
+    input(name='tarea[tarea]')
+    input(type='submit')
+    button(type='reset', class='btn',) Cancelar

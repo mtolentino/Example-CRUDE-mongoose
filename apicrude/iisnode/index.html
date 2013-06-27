@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>iisnode logs</title>
+    <style type="text/css">
+        body
+        {
+            font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+        }
+        table
+        {
+            border-collapse: collapse;
+        }
+        td, th
+        {
+            border: 1px solid lightgray;
+            padding: 3px 7px 2px 7px;
+        }
+        th
+        {
+            text-align: left;
+            padding-top: 5px;
+            padding-bottom: 4px;
+            background-color: Gray;
+            color: #ffffff;
+        }
+        td.stderr
+        {
+            color: Red;
+        }
+    </style>
+</head>
+<body>
+    <table id="logFilesTable">
+        <tr>
+            <th>
+                Computer name
+            </th>
+            <th>
+                PID
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Created
+            </th>
+            <th>
+                Link
+            </th>
+        </tr>
+    </table>
+    <p id="lastUpdated"></p>
+    <script type="text/javascript">
+
+        // this is replaced with actual data at runtime by code in interceptor.js
+        var logFiles = [{"file":"BETERSUS-ACER-1884-stdout-1371933670977.txt","computername":"BETERSUS-ACER","pid":1884,"type":"stdout","created":1371933670977},{"file":"BETERSUS-ACER-1996-stdout-1371933527364.txt","computername":"BETERSUS-ACER","pid":1996,"type":"stdout","created":1371933527364},{"file":"BETERSUS-ACER-4640-stderr-1372356403796.txt","computername":"BETERSUS-ACER","pid":4640,"type":"stderr","created":1372356403796},{"file":"BETERSUS-ACER-4640-stdout-1372356403784.txt","computername":"BETERSUS-ACER","pid":4640,"type":"stdout","created":1372356403784},{"file":"BETERSUS-ACER-4688-stderr-1372356430756.txt","computername":"BETERSUS-ACER","pid":4688,"type":"stderr","created":1372356430756},{"file":"BETERSUS-ACER-4688-stdout-1372356430746.txt","computername":"BETERSUS-ACER","pid":4688,"type":"stdout","created":1372356430746},{"file":"BETERSUS-ACER-4812-stderr-1372356406656.txt","computername":"BETERSUS-ACER","pid":4812,"type":"stderr","created":1372356406656},{"file":"BETERSUS-ACER-4812-stdout-1372356406646.txt","computername":"BETERSUS-ACER","pid":4812,"type":"stdout","created":1372356406646},{"file":"BETERSUS-ACER-4920-stderr-1372356375622.txt","computername":"BETERSUS-ACER","pid":4920,"type":"stderr","created":1372356375622},{"file":"BETERSUS-ACER-4920-stdout-1372356375433.txt","computername":"BETERSUS-ACER","pid":4920,"type":"stdout","created":1372356375433},{"file":"BETERSUS-ACER-5188-stdout-1371933905502.txt","computername":"BETERSUS-ACER","pid":5188,"type":"stdout","created":1371933905502},{"file":"BETERSUS-ACER-5204-stderr-1372356378807.txt","computername":"BETERSUS-ACER","pid":5204,"type":"stderr","created":1372356378807},{"file":"BETERSUS-ACER-5204-stdout-1372356378797.txt","computername":"BETERSUS-ACER","pid":5204,"type":"stdout","created":1372356378797},{"file":"BETERSUS-ACER-5208-stderr-1372356417709.txt","computername":"BETERSUS-ACER","pid":5208,"type":"stderr","created":1372356417709},{"file":"BETERSUS-ACER-5208-stdout-1372356417700.txt","computername":"BETERSUS-ACER","pid":5208,"type":"stdout","created":1372356417700},{"file":"BETERSUS-ACER-5344-stderr-1372356433377.txt","computername":"BETERSUS-ACER","pid":5344,"type":"stderr","created":1372356433377},{"file":"BETERSUS-ACER-5344-stdout-1372356433368.txt","computername":"BETERSUS-ACER","pid":5344,"type":"stdout","created":1372356433368},{"file":"BETERSUS-ACER-5424-stdout-1371933900382.txt","computername":"BETERSUS-ACER","pid":5424,"type":"stdout","created":1371933900382},{"file":"BETERSUS-ACER-5444-stdout-1371933425716.txt","computername":"BETERSUS-ACER","pid":5444,"type":"stdout","created":1371933425716},{"file":"BETERSUS-ACER-5540-stdout-1371933742226.txt","computername":"BETERSUS-ACER","pid":5540,"type":"stdout","created":1371933742226},{"file":"BETERSUS-ACER-5800-stderr-1372356395735.txt","computername":"BETERSUS-ACER","pid":5800,"type":"stderr","created":1372356395735},{"file":"BETERSUS-ACER-5800-stdout-1372356395722.txt","computername":"BETERSUS-ACER","pid":5800,"type":"stdout","created":1372356395722}];
+        var lastUpdated = 1372356434934;
+        var date = new Date();
+
+        date.setTime(lastUpdated);
+        document.getElementById('lastUpdated').innerHTML = 'Index was last updated ' + date;
+
+        logFiles.sort(function (a, b) {
+            return b.created - a.created;
+        });
+
+        var logFilesTable = document.getElementById("logFilesTable");
+        for (var i = 0; i < logFiles.length; i++) {
+            var logFile = logFiles[i];
+            date.setTime(logFile.created);
+            var row = logFilesTable.insertRow(-1);
+            var computerNameCell = row.insertCell(0);
+            var pidCell = row.insertCell(1);
+            var typeCell = row.insertCell(2);
+            var dateCell = row.insertCell(3);
+            var logCell = row.insertCell(4);
+            computerNameCell.innerHTML = logFile.computername;
+            pidCell.innerHTML = logFile.pid.toString();
+            typeCell.innerHTML = logFile.type;
+            typeCell.setAttribute('class', logFile.type);
+            dateCell.innerHTML = date.toString();
+            logCell.innerHTML = '<a href="' + logFile.file + '">log</a>';
+        };
+
+    </script>
+</body>
+</html>
